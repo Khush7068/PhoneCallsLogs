@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/callLogImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_person_placeholder"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callLogName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/callLogDescription"
+        app:layout_constraintStart_toEndOf="@+id/callTypeIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="khush" />
+
+    <ImageView
+        android:id="@+id/callTypeIcon"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_incoming_call"
+        app:layout_constraintBottom_toBottomOf="@+id/callLogImage"
+        app:layout_constraintEnd_toStartOf="@+id/callLogDescription"
+        app:layout_constraintStart_toEndOf="@+id/callLogImage"
+        app:layout_constraintTop_toTopOf="@+id/callLogImage"
+        app:tint="#b49aca" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/callLogDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/callLogImage"
+        app:layout_constraintStart_toEndOf="@+id/callTypeIcon"
+        app:layout_constraintTop_toBottomOf="@+id/callLogName">
+
+        <TextView
+            android:id="@+id/callLogNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="start"
+            android:textColor="#8C8C8C"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="9003209902" />
+
+        <TextView
+            android:id="@+id/callLogDate"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:textColor="#8C8C8C"
+            app:layout_constraintStart_toEndOf="@+id/callLogNumber"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="04/10/2020" />
+
+        <TextView
+            android:id="@+id/callLogTime"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:textColor="#8C8C8C"
+            app:layout_constraintStart_toEndOf="@+id/callLogDate"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12:20 AM" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
